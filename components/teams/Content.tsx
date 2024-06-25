@@ -101,7 +101,7 @@ export default function Content() {
         <Button
           disabled={remainingPlayers === 0}
           size="lg"
-          className="flex justify-center gap-3"
+          className="flex justify-center gap-3 w-full h-16"
         >
           <TokensIcon className="text-secondary h-5 w-5" />
           Escolher
