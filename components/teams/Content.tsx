@@ -20,7 +20,12 @@ const randomSelectTeam = ({
   teams: Team[];
   setTeams: Dispatch<SetStateAction<Team[]>>;
 }) => {
-  const teamsWithSpace = teams.filter((team) => team.members < team.maxMembers);
+  const lowestMembers = Math.min(...teams.map((team) => team.members));
+  const teamsWithSpace = teams.filter((team) => {
+    return (
+      team.members < team.maxMembers && !(team.members >= lowestMembers + 2)
+    );
+  });
   const randomIndex = Math.floor(Math.random() * teamsWithSpace.length);
 
   const teamToJoin = teamsWithSpace[randomIndex];
