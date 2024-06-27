@@ -106,9 +106,9 @@ export default function Content() {
         <Button
           disabled={remainingPlayers === 0}
           size="lg"
-          className="flex justify-center gap-3 w-full h-16"
+          className="flex justify-center gap-3 w-full h-16 text-3xl font-bold"
         >
-          <TokensIcon className="text-secondary h-5 w-5" />
+          <TokensIcon className="text-secondary h-8 w-8" />
           Escolher
         </Button>
       </ColorDialog>
